@@ -21,10 +21,10 @@ getTransaction = async (hash) => {
         let txId = Transactions.update({txhash:hash}, {$set:tx});
         // bulkTransactions.find({txhash:hash}).updateOne({$set:tx});
         // console.log(bulkTransactions.length)
-        // if (txId){
-        //     return txId;
-        // }
-        // else return false;
+        if (txId){
+            return txId;
+        }
+        else return false;
 
     }
     catch(e) {
