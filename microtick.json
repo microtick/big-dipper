@@ -17,7 +17,7 @@
         "powerReduction": 1000000,
         "coins": [
             {
-                "demon": "ibc/BC599B88586F8C22E408569D7F6FAD40AEBF808A67D2051B86958CBB5F0A16B0",
+                "denom": "ibc/BC599B88586F8C22E408569D7F6FAD40AEBF808A67D2051B86958CBB5F0A16B0",
                 "displayName": "DAI",
                 "fraction": 1000000
             },
