@@ -2,7 +2,7 @@
     "public":{
         "chainName": "Microtick Testnet",
         "chainId": "microtick",
-        "gtm": "{Add your Google Tag Manager ID here}",
+        "gtm": "",
         "slashingWindow": 10000,
         "uptimeWindow": 250,
         "initialPageSize": 30,
