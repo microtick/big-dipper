@@ -1,0 +1,59 @@
+{
+    "public":{
+        "chainName": "Microtick Testnet",
+        "chainId": "microtick",
+        "gtm": "{Add your Google Tag Manager ID here}",
+        "slashingWindow": 10000,
+        "uptimeWindow": 250,
+        "initialPageSize": 30,
+        "secp256k1": false,
+        "bech32PrefixAccAddr": "micro",
+        "bech32PrefixAccPub": "micropub",
+        "bech32PrefixValAddr": "microvaloper",
+        "bech32PrefixValPub": "microvaloperpub",
+        "bech32PrefixConsAddr": "microvalcons",
+        "bech32PrefixConsPub": "microvalconspub",
+        "bondDenom": "stake",
+        "powerReduction": 1000000,
+        "coins": [
+            {
+                "demon": "ibc/BC599B88586F8C22E408569D7F6FAD40AEBF808A67D2051B86958CBB5F0A16B0",
+                "displayName": "DAI",
+                "fraction": 1000000
+            },
+            {
+                "denom": "stake",
+                "displayName": "TICK",
+                "fraction": 1000000
+            }
+        ],
+        "modules": {
+            "supply": true,
+            "minting": false,
+            "gov": true
+        },
+        "gasPrice": 0.02,
+        "coingeckoId": ""
+    },
+    "remote":{
+        "rpc":"http://localhost:26657",
+        "lcd":"http://localhost:1317"
+    },
+    "debug": {
+        "startTimer": true
+    },
+    "params":{
+        "startHeight": 0,
+        "defaultBlockTime": 5000,
+	"validatorUpdateWindow": 300,
+        "blockInterval": 15000,
+        "consensusInterval": 1000,
+        "statusInterval":7500,
+        "signingInfoInterval": 1800000,
+        "proposalInterval": 5000,
+        "missedBlocksInterval": 60000,
+        "delegationInterval": 900000
+    }
+}
+
+
