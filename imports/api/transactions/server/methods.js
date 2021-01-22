@@ -11,7 +11,7 @@ getTransaction = async (hash) => {
     hash = hash.toUpperCase();
     // console.log("Get tx: "+hash)
     try {
-        let url = LCD+ '/txs/'+hash;
+        let url = LCD+ '/cosmos/tx/v1beta1/txs/'+hash;
         let response = HTTP.get(url);
         let tx = JSON.parse(response.content);
 

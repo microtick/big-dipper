@@ -24,7 +24,7 @@ static MinStake = 1 / Number(Coin.StakingCoin.fraction);
 
 constructor(amount, denom=Meteor.settings.public.bondDenom) {
     const lowerDenom = denom.toLowerCase();
-    this._coin = coinList.find(coin =>
+    this._coin = coinList.find(coin => 
         coin.denom.toLowerCase() === lowerDenom || coin.displayName.toLowerCase() === lowerDenom
     );
 

@@ -24,12 +24,12 @@ Meteor.methods({
     },
     // async 'Validators.getAllDelegations'(address){
     'Validators.getAllDelegations'(address){
-        let url = LCD + '/staking/validators/'+address+'/delegations';
+        let url = LCD + '/cosmos/staking/v1beta1/validators/'+address+'/delegations';
 
         try{
             let delegations = HTTP.get(url);
             if (delegations.statusCode == 200){
-                delegations = JSON.parse(delegations.content).result;
+                delegations = JSON.parse(delegations.content).delegation_responses;
                 delegations.forEach((delegation, i) => {
                     if (delegations[i] && delegations[i].shares)
                         delegations[i].shares = parseFloat(delegations[i].shares);
