@@ -62,6 +62,12 @@ getValidatorUptime = async (validatorSet) => {
                 let response = HTTP.get(url);
                 let signingInfo = JSON.parse(response.content).result;
                 if (signingInfo){
+                    if (signingInfo.tombstoned === undefined) {
+                        signingInfo.tombstoned = false
+                    }
+                    if (signingInfo.missed_blocks_counter === undefined) {
+                        signingInfo.missed_blocks_counter = 0
+                    }
                     let valData = validatorSet[key]
                     valData.tombstoned = signingInfo.tombstoned
                     valData.jailed_until = signingInfo.jailed_until
