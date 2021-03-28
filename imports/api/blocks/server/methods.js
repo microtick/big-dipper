@@ -232,6 +232,14 @@ Meteor.methods({
                 console.log(url);
                 console.log(e);
             }
+            
+            Object.keys(validatorSet).map(k => {
+                const val = validatorSet[k]
+                if (val.jailed === undefined) {
+                    val.jailed = false
+                }
+                val.status = val.status - 1
+            })
 
             let totalValidators = Object.keys(validatorSet).length;
             console.log("all validators: "+ totalValidators);
@@ -498,7 +506,8 @@ Meteor.methods({
                                     valData.self_delegation = (selfDelegation && selfDelegation.shares)?parseFloat(selfDelegation.shares)/parseFloat(valData.delegator_shares):0;
                                 }
                                 catch(e){
-                                    console.log("Getting self delegation: %o, \nurl: %o", e.response, url)
+                                    //console.log("Getting self delegation: %o, \nurl: %o", e.response, url)
+                                    valData.self_delegation = 0
                                 }
                             }
 
